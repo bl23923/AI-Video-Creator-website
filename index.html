@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">AI Video Creator</div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#create">Create</a>
+        <a href="#templates">Templates</a>
+        <a href="#about">About</a>
+    </div>
+
+    <button class="login-btn" id="loginButton">Login</button>
+</nav>
+  <div id="userWelcome" class="user-welcome"></div>
+<div id="dashboard" class="dashboard">
+
+    <div class="dashboard-card">
+        <div class="dashboard-icon">🎬</div>
+        <h3>Create Video</h3>
+        <p>Create a new AI video from your idea.</p>
+        <button onclick="scrollToCreate()">Create Now</button>
+    </div>
+
+    <div class="dashboard-card">
+        <div class="dashboard-icon">📁</div>
+        <h3>My Videos</h3>
+        <p>Your generated videos will appear here.</p>
+        <button onclick="showMyVideos()">View Videos</button>
+    </div>
+
+    <div class="dashboard-card">
+        <div class="dashboard-icon">👤</div>
+        <h3>My Profile</h3>
+        <p>View your account information.</p>
+        <button onclick="showProfile()">View Profile</button>
+    </div>
+
+</div>
+
+<div id="dashboardMessage"></div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="badge">✨ AI POWERED VIDEO CREATOR</div>
+
+        <h1>Create Amazing<br>
+            <span>Videos With AI</span>
+        </h1>
+
+        <p>
+            Turn your ideas into stunning videos using the power of Artificial Intelligence.
+        </p>
+
+        <button onclick="scrollToCreate()">Create Video 🚀</button>
+    </div>
+</section>
+
+
+<!-- CREATE -->
+<section class="create-section" id="create">
+
+    <div class="section-badge">🎬 CREATE YOUR VIDEO</div>
+
+    <h2>Bring Your <span>Ideas To Life</span></h2>
+
+    <p>Describe your video idea and let AI do the magic.</p>
+
+    <textarea id="videoIdea"
+        placeholder="Example: A cinematic video of a futuristic city at night..."></textarea>
+
+    <button id="createVideo">Generate Video ✨</button>
+
+    <div id="video-result"></div>
+
+    <div id="video-preview">
+        <div class="video-placeholder">
+            🎥
+            <p>Your AI generated video will appear here</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- TEMPLATES -->
+<section class="templates" id="templates">
+
+    <div class="section-badge">🔥 READY TO USE</div>
+
+    <h2>Popular <span>Templates</span></h2>
+
+    <p class="section-description">
+        Start creating faster with our ready-made video ideas.
+    </p>
+
+    <div class="template-container">
+
+        <div class="template-card">
+            <div class="card-icon">🎬</div>
+            <h3>Cinematic</h3>
+            <p>Create beautiful cinematic videos with dramatic visuals.</p>
+            <button data-template="Create a cinematic video with dramatic lighting and beautiful camera movements.">
+                Use Template
+            </button>
+        </div>
+
+        <div class="template-card">
+            <div class="card-icon">📱</div>
+            <h3>Social Media</h3>
+            <p>Create engaging videos perfect for Instagram and social media.</p>
+            <button data-template="Create a short viral social media video with modern visuals and energetic music.">
+                Use Template
+            </button>
+        </div>
+
+        <div class="template-card">
+            <div class="card-icon">📖</div>
+            <h3>Story Video</h3>
+            <p>Turn your story ideas into amazing visual videos.</p>
+            <button data-template="Create an emotional story video with beautiful scenes and cinematic visuals.">
+                Use Template
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div class="section-badge">💡 ABOUT US</div>
+
+    <h2>AI Video <span>Creator</span></h2>
+
+    <p>
+        AI Video Creator helps you transform simple ideas into amazing videos.
+        Our goal is to make video creation simple, fast and accessible to everyone.
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="logo">AI Video Creator</div>
+    <p>© 2026 AI Video Creator. Create something amazing.</p>
+</footer>
+
+
+<!-- LOGIN / SIGNUP MODAL -->
+<div class="auth-modal" id="authModal">
+
+    <div class="auth-box">
+
+        <button class="close-btn" id="closeButton">×</button>
+
+        <div class="auth-logo">✨</div>
+
+        <h2 id="authTitle">Welcome Back</h2>
+
+        <p id="authSubtitle">
+            Login to continue creating amazing videos.
+        </p>
+
+        <input type="text" id="nameInput" placeholder="Your Name">
+
+        <input type="email" id="emailInput" placeholder="Email Address">
+
+        <input type="password" id="passwordInput" placeholder="Password">
+
+        <button class="auth-submit" id="authSubmit">
+            Login
+        </button>
+
+        <p class="switch-auth" id="switchText">
+            Don't have an account?
+            <span id="switchButton">Sign Up</span>
+        </p>
+
+        <div id="authMessage"></div>
+
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
